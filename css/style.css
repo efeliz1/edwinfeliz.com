@@ -19,6 +19,7 @@ body,html
 .introHello
 {
     color: #dec79b;
+    letter-spacing: 2px;
    
 }
 #helloText
@@ -48,6 +49,7 @@ body,html
   font-size: 1.25rem;
   font-weight: 400 !important;
   color: #fff0ec;
+  letter-spacing: .5px
 }
 
 .introContact
@@ -59,4 +61,15 @@ body,html
     transition: all .2s ease-in-out;
     text-decoration: none;
     box-shadow: inset 0 -5px 0 #dec79b;
+}
+
+@media screen and (max-width: 479px) {
+    .introduction
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+} 
+
+
 }
