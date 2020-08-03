@@ -1,35 +1,32 @@
-
 @import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
 
-body,html
-{
-  background: #18181e; /* fallback for old browsers */
-  line-height: 1.5;
-  font-family: 'SF Pro Display','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+body,
+html {
+    background: #18181e;
+    /* fallback for old browsers */
+    line-height: 1.5;
+    font-family: 'SF Pro Display', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
-.introduction
-{
+.introduction {
     display: grid;
     justify-content: center;
     grid-template-columns: 1057px;
     gap: 40px;
-} 
+}
 
-.introHello
-{
+.introHello {
     color: #dec79b;
     letter-spacing: 2px;
-   
+
 }
-#helloText
-{
+
+#helloText {
     font-weight: 400;
     font-size: 48px
 }
 
-.introInfo
-{
+.introInfo {
     color: #fff0ec;
     font-weight: 400;
     font-size: 21px;
@@ -38,28 +35,25 @@ body,html
 
 
 
-#name
-{
+#name {
     font-weight: bold;
     color: #dec79b;
 }
 
-#introContactText
-{
-  font-size: 1.25rem;
-  font-weight: 400 !important;
-  color: #fff0ec;    
-    
+#introContactText {
+    font-size: 1.25rem;
+    font-weight: 400 !important;
+    color: #fff0ec;
+
 }
-#introContactText a:link 
-{
+
+#introContactText a:link {
     text-decoration: none;
     color: #fff0ec;
 }
 
 
-.introContact
-{
+.introContact {
     justify-self: start;
     padding-right: 5px;
     padding-left: 5px;
@@ -69,14 +63,53 @@ body,html
     cursor: pointer;
 }
 
-.introContact:hover
-{
+.introContact:hover {
     box-shadow: inset 0 100px 0 0 #dec79b;
 }
+.section{
+    display: flex;
+    justify-content: center;
+    padding: 100px 170px
+}
 
+section {
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 200px 3fr;
+    justify-content:center;
+    grid-gap: 70px
 
+}
 
+.sectionProjectTitle {
+    justify-self: start;
+    width: 200px;
+}
 
+.projectTitle {
+    grid-area: title;
+}
+
+.projectDemoButton {
+    grid-area: demo;
+}
+
+.projectDescription {
+    grid-area: description;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: auto;
+    grid-template-areas:
+
+        "title . . demo"
+        ". . . ."
+
+        "description description description description"
+    ;
+}
 
 /*
 @media screen and (max-width: 479px) {
