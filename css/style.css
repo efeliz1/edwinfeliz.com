@@ -30,6 +30,7 @@ html {
     color: #fff0ec;
     font-weight: 400;
     font-size: 21px;
+    letter-spacing: 1px;
 }
 
 
@@ -69,43 +70,71 @@ html {
 .section{
     display: flex;
     justify-content: center;
-    padding: 100px 170px
+    padding: 200px 170px
 }
 
 section {
-    color: aliceblue;
+    color: #fff0ec;
     display: grid;
     grid-template-columns: 200px 3fr;
     justify-content:center;
-    grid-gap: 70px
-
+    grid-gap: 100px;
 }
 
 .sectionProjectTitle {
     justify-self: start;
     width: 200px;
+    font-size: 21px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: end;
+    color: #dec79b;
 }
 
 .projectTitle {
     grid-area: title;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    
 }
 
 .projectDemoButton {
     grid-area: demo;
+    text-align: end;
 }
+
+.projectDemoButton a{
+  color: #fff0ec;
+  overflow: hidden;
+  background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none; 
+ 
+}
+ .projectDemoButton a:hover {
+    background-position: 0 100%;
+    }
 
 .projectDescription {
     grid-area: description;
+    letter-spacing: 1px;
+    line-height: 1.2ems;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: auto;
+    grid-template-columns: 100px 100px 200px 200px;
+    grid-template-rows: auto auto 100px;
+    grid-row-gap: 20px;
     grid-template-areas:
 
-        "title . . demo"
-        ". . . ."
+        "title title title demo"
+        
+        "description description description description"
 
         "description description description description"
     ;
