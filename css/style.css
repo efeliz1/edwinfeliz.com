@@ -68,7 +68,7 @@ html {
     box-shadow: inset 0 100px 0 0 #dec79b;
 }
 
-.section {
+.sections {
     display: flex;
     justify-content: center;
     padding: 200px 170px
@@ -103,7 +103,7 @@ section {
 
 .projectDemo {
     grid-area: demo;
-    text-align: end ;
+    text-align: end;
 }
 
 .projectDemo a {
@@ -113,6 +113,7 @@ section {
     font-size: 18px;
     text-decoration: none;
 }
+
 .demoBtn {
     border: 0 solid #dec79b;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
@@ -121,21 +122,21 @@ section {
     outline-offset: 0px;
     text-shadow: none;
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-  } 
-  
-  .demoBtn:hover {
+}
+
+.demoBtn:hover {
     border: 1px solid;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
-    text-shadow: 1px 1px 2px #427388; 
-  }
+    text-shadow: 1px 1px 2px #427388;
+}
 
 .projectDescription {
     grid-area: description;
     letter-spacing: 1px;
     line-height: 1.2ems;
-    color:#afafbf;
+    color: #afafbf;
 }
 
 .projects {
