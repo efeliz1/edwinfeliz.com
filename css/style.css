@@ -18,6 +18,7 @@ html {
 .introHello {
     color: #dec79b;
     letter-spacing: 2px;
+    text-align: center
 
 }
 
@@ -32,7 +33,6 @@ html {
     font-size: 16px;
     letter-spacing: 1px;
 }
-
 
 
 
@@ -71,15 +71,20 @@ html {
 .sections {
     display: flex;
     justify-content: center;
+    padding: 200px 170px;
+}
+.sectionsProject{
+    display: flex;
+    justify-content: flex-start;
     padding: 200px 170px
 }
-
 section {
     color: #fff0ec;
     display: grid;
     grid-template-columns: 200px 3fr;
     justify-content: center;
     grid-gap: 100px;
+    grid-row-gap: 250px
 }
 
 #sectionProjectTitle {
