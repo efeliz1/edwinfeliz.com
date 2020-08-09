@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/efeliz1/portfolio/issues"
   },
-  "homepage": "https://github.com/efeliz1/portfolio#readme"
+  "homepage": "https://github.com/efeliz1/portfolio#readme",
+  "dependencies": {}
 }
