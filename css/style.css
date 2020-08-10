@@ -9,9 +9,10 @@ body,html {
     font-family: "SF Pro Display", "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
     overflow-x: hidden;
+    margin: 0;
 }
 
-
+/*introduction*/
 .introduction {
     display: grid;
     justify-content: center;
@@ -72,11 +73,7 @@ body,html {
     flex-direction: column;
     padding: 200px 170px;
 }
-.sectionsProject {
-    display: flex;
-    justify-content: flex-start;
-    padding: 200px 170px;
-}
+/*about and projects*/
 section {
     color: #fff0ec;
     display: grid;
@@ -85,6 +82,17 @@ section {
     grid-gap: 100px;
     grid-row-gap: 250px;
     
+}
+.projects {
+    display: grid;
+    grid-template-columns: 100px 100px 200px 220px;
+    grid-template-rows: auto auto 100px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "title title title demo"
+        "description description description description"
+        "description description description description"
+        "tool tool tool tool ";
 }
 
 #sectionTitle {
@@ -95,6 +103,14 @@ section {
     font-weight: 400;
     text-align: end;
     color: #dec79b;
+}
+#about{
+    display: flex;
+    padding: 200px 170px;
+}
+.projectSection{
+    display: flex;
+    padding: 200px 170px;
 }
 
 .Title {
@@ -144,41 +160,16 @@ section {
     color: #afafbf;
 }
 .tool{
+   
     grid-area: tool;
-}
-
-.projects {
+    color:#afafbf;
     display: grid;
-    grid-template-columns: 100px 100px 200px 220px;
-    grid-template-rows: auto auto 100px;
-    grid-row-gap: 20px;
-    grid-template-areas:
-        "title title title demo"
-        "description description description description"
-        "description description description description"
-        "tool tool tool tool";
-}
-
-#about{
-    display: flex;
-    padding: 200px 170px;
-}
-.projectSection{
-    display: flex;
-    padding: 200px 170px;
+    grid-column: inherit;
 }
 
 
-/*contact*/
-.sectionContact{
-    display: block;
-    margin: 0 auto;
-    
-}
-.contacts{
-    display: flex;
-    
-}
+
+
 
 .onoffswitch {
     position: relative; width: 55px;
@@ -218,6 +209,16 @@ section {
     right: 0px; 
     background-color: #dec79b; 
     box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+footer{
+    
+    padding: 5px
+}
+
+footer p{
+    color: #FFFFFF;
+    text-align: center;
 }
 /*
 @media screen and (max-width: 479px) {
