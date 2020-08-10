@@ -1,14 +1,16 @@
 @import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
 
-body,
-html {
-    background: #18181e;
+body,html {
+    background-color: #18181e;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
     
     /* fallback for old browsers */
     line-height: 1.5;
     font-family: "SF Pro Display", "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+    overflow-x: hidden;
 }
+
 
 .introduction {
     display: grid;
@@ -29,7 +31,7 @@ html {
 }
 
 .introInfo {
-    color: #fff0ec;
+    color: #FFFFFF;
     font-weight: 300;
     font-size: 16px;
     letter-spacing: 1px;
@@ -43,12 +45,12 @@ html {
 #introContactText {
     font-size: 16px;
     font-weight: 400 !important;
-    color: #fff0ec;
+    color: #FFFFFF;
 }
 
 #introContactText a:link {
     text-decoration: none;
-    color: #fff0ec;
+    color: #FFFFFF;
 }
 
 .introContact {
@@ -82,6 +84,7 @@ section {
     justify-content: center;
     grid-gap: 100px;
     grid-row-gap: 250px;
+    
 }
 
 #sectionTitle {
@@ -140,6 +143,9 @@ section {
     line-height: 1.2ems;
     color: #afafbf;
 }
+.tool{
+    grid-area: tool;
+}
 
 .projects {
     display: grid;
@@ -149,7 +155,8 @@ section {
     grid-template-areas:
         "title title title demo"
         "description description description description"
-        "description description description description";
+        "description description description description"
+        "tool tool tool tool";
 }
 
 #about{
@@ -160,32 +167,23 @@ section {
     display: flex;
     padding: 200px 170px;
 }
-.skills {
-    display: grid;
-    grid-template-columns: repeat(4, 400px);
-    grid-template-rows: repeat(2, 200px);
+
+
+/*contact*/
+.sectionContact{
+    display: block;
+    margin: 0 auto;
+    
+}
+.contacts{
+    display: flex;
+    
 }
 
-img {
-    display: grid;
-    width: 50%;
-    justify-self: end;
-    margin: 5px auto;
-}
-div.imageCard {
-    width: 60%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-    margin: auto;
-    border: 1px #2F2934 solid;
-}
-div.container {
-    text-align: center;
-    padding: 10px 20px;
-}
 .onoffswitch {
     position: relative; width: 55px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    margin: 10px;
 }
 .onoffswitch-checkbox {
     position: absolute;
