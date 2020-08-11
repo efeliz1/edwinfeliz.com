@@ -65,17 +65,18 @@ html {
     cursor: pointer;
 }
 
-.introContact:hover {
+.introContact:active {
     box-shadow: inset 0 100px 0 0 #dec79b;
 }
 
+/*about and projects*/
 .sections {
     display: flex;
     flex-direction: column;
     padding: 200px 170px;
 }
 
-/*about and projects*/
+
 section {
     color: #fff0ec;
     display: grid;
@@ -110,10 +111,10 @@ section {
 .about {
     display: flex;
     padding: 90px 150px;
-     opacity: 0;
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-    opacity .3s .25s ease-out;
-    will-change: transform, opacity; 
+    opacity: 0;
+    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+        opacity 0.3s 0.25s ease-out;
+    will-change: transform, opacity;
 }
 
 .about.is-visible {
@@ -190,32 +191,8 @@ section {
     text-decoration: underline;
 }
 
-.github {
-    width: 40px;
-    line-height: 40px;
-    overflow: hidden;
-    z-index: 999;
-    display: none;
-    cursor: pointer;
-    -moz-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
-    position: fixed;
-    bottom: 50px;
-    right: 0;
-    background-color: #ddd;
-    color: #555;
-    text-align: center;
-    font-size: 30px;
-    text-decoration: none;
-}
-
-.github:hover {
-    background-color: #555;
-}
-
+/*social media button*/
+/*footer*/
 footer {
     padding: 5px;
 }
@@ -224,7 +201,7 @@ footer p {
     color: #ffffff;
     text-align: center;
 }
-
+/*iphone6/7/8 display*/
 @media screen and (max-width: 479px) {
     #page {
         animation: fadein 1s;
@@ -235,65 +212,74 @@ footer p {
         grid-template-columns: 1fr;
         padding: 10px;
     }
-    
-    .sections{
+    .introContact {
+    justify-self: start;
+    padding-right: 5px;
+    padding-left: 5px;
+    transition: all ease 0.8s;
+    text-decoration: none;
+    box-shadow: inset 0 4px 0 0 #dec79b;
+    cursor: pointer;
+}
+
+.introContact:hover {
+    box-shadow: inset 0 100px 0 0 #dec79b;
+}
+
+
+    .sections {
         display: flex;
         flex-direction: column;
         padding: 0;
-        
     }
-    
-    section{
+
+    section {
         color: #fff0ec;
         display: grid;
         grid-row-gap: 50px;
         padding: 120px 10px;
-        
     }
-    .about{
+
+    .about {
         display: flex;
         flex-direction: column;
-        padding:120px 5px;
+        padding: 215px 5px;
         opacity: 0;
-    transition: transform 4s .25s cubic-bezier(0,1,.3,1),
-    opacity .3s .25s ease-out;
-    will-change: transform, opacity; 
+        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+            opacity 0.3s 0.25s ease-out;
+        will-change: transform, opacity;
     }
-    .about.is-visible {
-    opacity: 1;
-    transform: rotateZ(-2deg);
-}
 
+    .about.is-visible {
+        opacity: 1;
+        transform: rotateZ(-2deg);
+    }
 
     .projects {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 20px;
-    grid-template-areas:
-        "title title title demo"
-        "description description description description"
-        "description description description description"
-        "tool tool tool tool ";
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 20px;
+        grid-template-areas:
+            "title title title demo"
+            "description description description description"
+            "description description description description"
+            "tool tool tool tool ";
         padding: 10px;
-}
+    }
+
     .projectSection {
-    display: flex;
-    padding: 0;
-    opacity: 0;
-    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
-        opacity 0.3s 0.25s ease-out;
-    will-change: transform, opacity;
+        display: flex;
+        padding: 0;
+        opacity: 0;
+        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+            opacity 0.3s 0.25s ease-out;
+        will-change: transform, opacity;
         flex-direction: column;
-}
+    }
 
-.projectSection.is-visible {
-    opacity: 1;
-    transform: rotateZ(-2deg);
-}
-
-
-    
-
-
+    .projectSection.is-visible {
+        opacity: 1;
+        transform: rotateZ(-2deg);
+    }
 }
