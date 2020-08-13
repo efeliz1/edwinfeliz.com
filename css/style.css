@@ -201,7 +201,7 @@ footer p {
     color: #ffffff;
     text-align: center;
 }
-/*iphone6/7/8 display*/
+/*mobile display*/
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 667px) {
@@ -286,7 +286,7 @@ and (max-device-width : 667px) {
     }
 }
 
-
+/*tablet*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px){
