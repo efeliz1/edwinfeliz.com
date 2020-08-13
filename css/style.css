@@ -65,7 +65,7 @@ html {
     cursor: pointer;
 }
 
-.introContact:active {
+.introContact:hover {
     box-shadow: inset 0 100px 0 0 #dec79b;
 }
 
@@ -192,7 +192,7 @@ section {
 }
 
 /*social media button*/
-/*footer*/
+/*footer ending*/
 footer {
     padding: 5px;
 }
@@ -202,7 +202,9 @@ footer p {
     text-align: center;
 }
 /*iphone6/7/8 display*/
-@media screen and (max-width: 479px) {
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
     #page {
         animation: fadein 1s;
     }
@@ -222,7 +224,7 @@ footer p {
     cursor: pointer;
 }
 
-.introContact:hover {
+.introContact:active {
     box-shadow: inset 0 100px 0 0 #dec79b;
 }
 
@@ -282,4 +284,76 @@ footer p {
         opacity: 1;
         transform: rotateZ(-2deg);
     }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px){
+/* start of medium tablet styles */
+     #page {
+        animation: fadein 1s;
+    }
+    .introduction {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 20px;
+}
+    .sections {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+    section {
+    color: #fff0ec;
+    display: grid;
+    grid-template-columns: 200px 3fr;
+    grid-gap: 90px;
+}
+    .about {
+    display: flex;
+    opacity: 0;
+    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+        opacity 0.3s 0.25s ease-out;
+    will-change: transform, opacity;
+    flex-direction: column;
+    padding: 100px 20px;
+}
+
+.about.is-visible {
+    opacity: 1;
+    transform: rotateZ(-2deg);
+}
+    .projects {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 20px;
+        grid-template-areas:
+            "title title title demo"
+            "description description description description"
+            "description description description description"
+            "tool tool tool tool ";
+        padding: 10px;
+    }
+
+    .projectSection {
+        display: flex;
+        padding: 50px 10px;
+        opacity: 0;
+        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+            opacity 0.3s 0.25s ease-out;
+        will-change: transform, opacity;
+        flex-direction: column;
+    }
+
+    .projectSection.is-visible {
+        opacity: 1;
+        transform: rotateZ(-2deg);
+    }
+    
+
+
 }
