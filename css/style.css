@@ -1,4 +1,9 @@
-@import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
 
 body,
 html {
@@ -7,7 +12,7 @@ html {
 
     /* fallback for old browsers */
     line-height: 1.5;
-    font-family: "SF Pro Display", "Lucida Sans", "Lucida Sans Regular",
+    font-family: "SF Pro Display","system","SF Pro Icons", "SF Pro Text", "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
     overflow-x: hidden;
     margin: 0;
@@ -83,7 +88,6 @@ section {
     grid-template-columns: 200px 3fr;
     justify-content: center;
     grid-gap: 100px;
-    grid-row-gap: 250px;
 }
 
 .projects {
