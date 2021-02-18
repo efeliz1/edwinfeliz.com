@@ -4,19 +4,22 @@
     font-weight: 300;
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
-
+@import '~@adidas/yarn-design-system/dist/yarn.css';
+@import '~@adidas/yarn-design-system/dist/yarn-icon.css';
+@import '~@adidas/yarn-design-system/dist/yarn-logo.css';
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-
+:root{
+    --main-color:#dec79b;
+}
 body,
 html {
     box-sizing: border-box;
     background-color: #18181e;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
-
     /* fallback for old browsers */
     line-height: 1.5;
-    font-family: "SF Pro Display", "system", "SF Pro Icons", "SF Pro Text", "Lucida Sans", "Lucida Sans Regular",
+    font-family: "yarn-base","SF Pro Display", "system", "SF Pro Icons", "SF Pro Text", "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
     overflow-x: hidden;
     margin: 0;
@@ -33,58 +36,93 @@ html {
 /*Responsive Rules*/
 
 @media only screen and (max-width: 600px) {
-    .introduction{
+    .introduction {
         grid-gap: 40px;
-        grid-template-columns: repeat(auto-fit,minmax(186px,1fr));
-        margin:auto;
-        padding:10px;    
+        grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+        margin: auto;
+        padding: 5px;
     }
 
     .sections {
         padding: 0 !important;
     }
 
-    section{
+    section {
         display: grid !important;
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
         justify-content: start !important;
         grid-gap: 0px !important;
     }
-    .about{
+
+    .about {
         display: grid !important;
-        padding:0px !important;
+        padding: 0px !important;
         padding-left: 5px !important;
         padding-right: 5px !important;
         padding-top: 200px !important;
     }
 
-    .projects{
+    .projects {
         display: block !important;
         padding-top: 15px;
-        grid-template-columns: repeat(auto-fit,minmax(255px,1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)) !important;
     }
 
-    .Description{
+    .Description {
         line-height: 1.9em;
     }
 
     /*project section*/
-    section.projectSection.show-on-scroll.is-visible{
+    section.projectSection.show-on-scroll.is-visible {
         padding: 0px;
-        margin:10px;
+        margin: 10px;
     }
 
     /*remove tool desktop*/
-    .tool.desktop{
+    .tool.desktop {
         display: none !important;
+    }
+
+    .tool.mobile {
+        display: inline-block !important;
+    }
+
+    .projectSection.is-visible {
+        opacity: 1;
+        transform: rotateZ(-2deg);
+    }
+
+    .about.is-visible {
+        opacity: 1;
+        transform: rotateZ(-2deg);
     }
 }
 
-@media only screen and (max-width: 320px){
-    .projects{
-    grid-template-columns: repeat(auto-fit,minmax(205px,1fr)) !important;
+@media only screen and (max-width: 411px) {
+    .about {
+        padding-top: 300px !important;
     }
 }
+
+@media only screen and (max-width: 414px) {
+    .about {
+        padding-top: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .about {
+        padding-top: 400px !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)) !important;
+    }
+}
+
+
 
 
 
@@ -140,7 +178,8 @@ html {
 .sections {
     display: flex;
     flex-direction: column;
-    padding: 200px 170px;
+    /*padding: 200px 170px;*/
+    align-items: center;
 }
 
 
@@ -175,8 +214,8 @@ section {
 }
 
 .about {
-    display: flex;
-    padding: 90px 150px;
+    /*padding-top: 90px;*/
+    padding: 200px 100px;
     opacity: 0;
     transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
         opacity 0.3s 0.25s ease-out;
@@ -185,12 +224,11 @@ section {
 
 .about.is-visible {
     opacity: 1;
-    transform: rotateZ(-2deg);
+    /*transform: rotateZ(-2deg);*/
 }
 
 .projectSection {
-    display: flex;
-    padding: 90px 150px;
+    padding-top: 100px;
     opacity: 0;
     transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
         opacity 0.3s 0.25s ease-out;
@@ -199,7 +237,7 @@ section {
 
 .projectSection.is-visible {
     opacity: 1;
-    transform: rotateZ(-2deg);
+    /*transform: rotateZ(-2deg);*/
 }
 
 .Title {
@@ -272,18 +310,56 @@ div#MySQL {
 }
 
 /*remove tool mobile*/
-.tool.mobile{
+.tool.mobile {
     display: none;
+}
+
+/*contact*/
+section#contact {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    padding: 0px;
+    background: #303841;
+    border-radius: 100px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+    margin:50px;
+    border: 2px solid var(--main-color);
+    width: 50%;
+}
+
+.contact-section-header{
+    display: none;
+}
+
+.contact-link a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.contact-link a:hover{
+    text-decoration: underline;
+}
+
+a.btn-contact-details{
+    display: inline-block;
+    padding:1px;
+
 }
 
 /*social media button*/
 /*footer ending*/
 footer {
     padding: 5px;
+    border-top: 5px solid var(--main-color);
 }
 
 footer p {
-    color: #ffffff;
+    color: var(--main-color);
     text-align: center;
 }
 
@@ -377,7 +453,7 @@ footer p {
 /*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
     /* start of medium tablet styles */
-    /*#page {
+/*#page {
         animation: fadein 1s;
     }
 
