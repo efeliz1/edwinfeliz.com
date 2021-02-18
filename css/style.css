@@ -1,20 +1,22 @@
 @font-face {
-  font-family: system;
-  font-style: normal;
-  font-weight: 300;
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
+
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
 body,
 html {
+    box-sizing: border-box;
     background-color: #18181e;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 
     /* fallback for old browsers */
     line-height: 1.5;
-    font-family: "SF Pro Display","system","SF Pro Icons", "SF Pro Text", "Lucida Sans", "Lucida Sans Regular",
+    font-family: "SF Pro Display", "system", "SF Pro Icons", "SF Pro Text", "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
     overflow-x: hidden;
     margin: 0;
@@ -27,6 +29,54 @@ html {
     grid-template-columns: 1057px;
     gap: 40px;
 }
+
+/*Responsive Rules*/
+
+@media only screen and (max-width: 600px) {
+    .introduction{
+        grid-gap: 40px;
+        grid-template-columns: repeat(auto-fit,minmax(186px,1fr));
+        margin:auto;
+        padding:10px;    
+    }
+
+    .sections {
+        padding: 0 !important;
+    }
+
+    section{
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+        justify-content: start !important;
+        grid-gap: 0px !important;
+    }
+    .about{
+        display: grid !important;
+        padding:0px !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        padding-top: 200px !important;
+    }
+
+    .projects{
+        padding-top: 15px;
+        grid-template-columns: repeat(auto-fit,minmax(255px,1fr)) !important;
+    }
+
+    .Description{
+        line-height: 1.9em;
+    }
+    
+
+}
+
+@media only screen and (max-width: 320px){
+    .projects{
+    grid-template-columns: repeat(auto-fit,minmax(205px,1fr)) !important;
+    }
+}
+
+
 
 .introHello {
     color: #dec79b;
@@ -125,7 +175,7 @@ section {
 
 .about.is-visible {
     opacity: 1;
-    /*transform: rotateZ(-2deg);*/
+    transform: rotateZ(-2deg);
 }
 
 .projectSection {
@@ -139,7 +189,7 @@ section {
 
 .projectSection.is-visible {
     opacity: 1;
-    /*transform: rotateZ(-2deg);*/
+    transform: rotateZ(-2deg);
 }
 
 .Title {
@@ -185,7 +235,7 @@ section {
 .Description {
     grid-area: description;
     letter-spacing: 1px;
-    line-height: 1.2ems;
+    line-height: 1.9em;
     color: #afafbf;
 }
 
@@ -221,11 +271,12 @@ footer p {
     color: #ffffff;
     text-align: center;
 }
+
+
+
 /*mobile display*/
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) {
-    #page {
+/*@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {*/
+/*    #page {
         animation: fadein 1s;
     }
 
@@ -234,19 +285,20 @@ and (max-device-width : 667px) {
         grid-template-columns: 1fr;
         padding: 10px;
     }
-    .introContact {
-    justify-self: start;
-    padding-right: 5px;
-    padding-left: 5px;
-    transition: all ease 0.8s;
-    text-decoration: none;
-    box-shadow: inset 0 4px 0 0 #dec79b;
-    cursor: pointer;
-}
 
-.introContact:active {
-    box-shadow: inset 0 100px 0 0 #dec79b;
-}
+    .introContact {
+        justify-self: start;
+        padding-right: 5px;
+        padding-left: 5px;
+        transition: all ease 0.8s;
+        text-decoration: none;
+        box-shadow: inset 0 4px 0 0 #dec79b;
+        cursor: pointer;
+    }
+
+    .introContact:active {
+        box-shadow: inset 0 100px 0 0 #dec79b;
+    }
 
 
     .sections {
@@ -303,49 +355,53 @@ and (max-device-width : 667px) {
     .projectSection.is-visible {
         opacity: 1;
         transform: rotateZ(-2deg);
-    }
-}
+    }*/
+/*}*/
 
 /*tablet*/
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px){
-/* start of medium tablet styles */
-     #page {
+/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    /* start of medium tablet styles */
+    /*#page {
         animation: fadein 1s;
     }
-    .introduction {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px 20px;
-}
-    .sections {
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-}
-    section {
-    color: #fff0ec;
-    display: grid;
-    grid-template-columns: 200px 3fr;
-    grid-gap: 90px;
-}
-    .about {
-    display: flex;
-    opacity: 0;
-    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
-        opacity 0.3s 0.25s ease-out;
-    will-change: transform, opacity;
-    flex-direction: column;
-    padding: 100px 20px;
-}
 
-.about.is-visible {
-    opacity: 1;
-    transform: rotateZ(-2deg);
-}
+    .introduction {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px 20px;
+    }
+
+    .sections {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    section {
+        color: #fff0ec;
+        display: grid;
+        grid-template-columns: 200px 3fr;
+        grid-gap: 90px;
+    }
+
+    .about {
+        display: flex;
+        opacity: 0;
+        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+            opacity 0.3s 0.25s ease-out;
+        will-change: transform, opacity;
+        flex-direction: column;
+        padding: 100px 20px;
+    }
+
+    .about.is-visible {
+        opacity: 1;
+        transform: rotateZ(-2deg);
+    }
+
     .projects {
         display: grid;
         grid-template-columns: auto auto auto auto;
@@ -372,8 +428,6 @@ and (max-device-width : 1024px){
     .projectSection.is-visible {
         opacity: 1;
         transform: rotateZ(-2deg);
-    }
-    
+    }*/
 
-
-}
+/*}*/
