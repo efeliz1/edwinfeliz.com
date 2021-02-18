@@ -78,10 +78,6 @@ html {
     .tool.desktop{
         display: none !important;
     }
-
-
-    
-
 }
 
 @media only screen and (max-width: 320px){
@@ -273,6 +269,11 @@ div#MySQL {
     display: flex;
     gap: 10px;
     text-decoration: underline;
+}
+
+/*remove tool mobile*/
+.tool.mobile{
+    display: none;
 }
 
 /*social media button*/
