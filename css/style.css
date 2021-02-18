@@ -96,6 +96,10 @@ html {
         opacity: 1;
         transform: rotateZ(-2deg);
     }
+    section#contact {
+        font-size: 1rem !important;
+        width: auto !important;
+    }
 }
 
 @media only screen and (max-width: 411px) {
@@ -119,6 +123,9 @@ html {
 @media only screen and (max-width: 320px) {
     .projects {
         grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)) !important;
+    }
+    section#contact {
+        margin: 10px !important;
     }
 }
 
