@@ -8,17 +8,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- CSS-->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
     <div id="page">
-        <div>
-            <a href="#"><i id="githubBtn" class="fa fa-github"></i></a>
-        </div>
         <!-- side scroll up -->
         <!-- switch light to dark -->
         <!-- <div class="onoffswitch">
@@ -41,7 +37,7 @@
                 <div class="introInfo">
                     <!-- h2 -->
                     <h2>
-                        My name is <span id="name">Edwin Feliz</span>, I am a Web
+                        My name is <span id="name"></span>, I am a Web
                         Developer. I make secure and flexible web
                         application, mainly with JavaScript.
                     </h2>
@@ -67,96 +63,123 @@
                 <div id="sectionTitle">About me</div>
                 <div class="projects">
                     <div class="Title">
-                        I'm Edwin Feliz
+                        I'm <span id="nameTitle"></span>
                     </div>
                     <div class="Demo">
                         <a class="demoBtn" href="https://www.docdroid.net/hhHNojx/edwin-feliz-entry-level-front-end-developer-pdf">Resume</a>
                     </div>
-                    <div class="Description">
-                        I am a web developer based in the United States and
-                        I have been building a web application website for
-                        years, which brings my employee's ideas to life. I
-                        help convert a vision and an idea into meaningful
-                        web pages. Take your time to look at my portfolio
-                        and projects. Let see if we can work together on
-                        your next idea.
+                    <div class="Description" id="aboutMeDescription">
                     </div>
                 </div>
             </section>
             <!-- projects-->
-            
-                <section class="projectSection show-on-scroll">
-                    <div id="sectionTitle">Projects</div>
-                    <div class="projects">
-                        <div class="Title">
-                            Clean Cuts Shop
-                        </div>
-                        <div class="Demo">
-                            <a class="demoBtn" href="http://159.89.229.0:8080/cleancuts/index.jsp">Demo</a>    &nbsp;
-                            <a class="demoBtn" href="https://github.com/efeliz1/cleancuts">Code</a>
-                        </div>
-                        <div class="Description">
-                            A digital appointment management system tailored for hair services.
-                            Where customers are able to register and sign in to make an appointment and
-                            Employers can view their appintmnets.
-                        </div>
-                        
-                        <div class="tool desktop" id="html-css">HTML
-                            <div>CSS</div>
-                        </div>
-                        <div class="tool desktop">JavaScript
-                            <div>Java</div>
-                        </div>
-                        <div class="tool desktop" id="MySQL">MySQL
-                            <div>JSP</div>
-                            <div>Tomcat</div>
-                        </div>
-                        
-                        <div class="tool mobile">HTML, CSS, JavaScript, Java, MySQL, JSP, Tomcat</div>
-
+            <section class="projectSection show-on-scroll">
+                <div id="sectionTitle">Projects</div>
+                <div class="projects">
+                    <div class="Title">
+                        Clean Cuts Shop
                     </div>
-                </section>
-
-                <section id="contact" class="contact-section">
-                    <div class="contact-section-header">
-                        <h3>Get in Touch..</h3>
+                    <div class="Demo">
+                        <a class="demoBtn" href="http://159.89.229.0:8080/cleancuts/index.jsp">Demo</a> &nbsp;
+                        <a class="demoBtn" href="https://github.com/efeliz1/cleancuts">Code</a>
                     </div>
-                    <div class="contact-link">
-                        <a href="mailto:edwinjfeliz@icloud.com" class="btn-contact-details">
-                            <i class="fas fa-envelope-square"></i>
-                            Send an Email
-                        </a>
-                        <a href="tel:978-227-8634" class="btn-contact-details">
-                            <i class="fas fa-phone-square-alt"></i>
-                            Call Me
-                        </a>
-                        <a href="https://twitter.com/efeliz809" class="btn-contact-details">
-                            <i class="fab fa-twitter-square"></i>
-                            Twitter
-                        </a>
-                        <a href="https://github.com/efeliz1" class="btn-contact-details">
-                            <i class="fab fa-github-square"></i>
-                            GitHub
-                        </a>
+                    <div class="Description">
+                        A digital appointment management system tailored for hair services.
+                        Where customers are able to register and sign in to make an appointment and
+                        Employers can view their appintmnets.
                     </div>
-                </section>
+                    <div class="tool desktop" id="html-css">HTML
+                        <div>CSS</div>
+                    </div>
+                    <div class="tool desktop">JavaScript
+                        <div>Java</div>
+                    </div>
+                    <div class="tool desktop" id="MySQL">MySQL
+                        <div>JSP</div>
+                        <div>Tomcat</div>
+                    </div>
+                    <div class="tool mobile">HTML, CSS, JavaScript, Java, MySQL, JSP, Tomcat</div>
+                </div>
+            </section>
+            <section class="projectSection show-on-scroll">
+                <div class="projects">
+                    <div class="Title">
+                        Smooth Shoes Store
+                    </div>
+                    <div class="Demo">
+                        <a class="demoBtn" href="https://affectionate-haibt-f2be6c.netlify.app/">Demo</a> &nbsp;
+                        <a class="demoBtn" href="https://github.com/efeliz1/Store_inventorys">Code</a>
+                    </div>
+                    <div class="Description">
+                        An inventory tracker that would store all location total sale of each store made per day.
+                        Manager or Employers can store their daily sells and analyze the volume per store inventory on each location.
+                    </div>
+                    <div class="tool desktop" id="html-css">HTML
+                        <div>CSS</div>
+                    </div>
+                    <div class="tool desktop">JavaScript
+                    </div>
+                    <div class="tool mobile">HTML, CSS, JavaScript</div>
+                </div>
+            </section>
+            <section class="projectSection show-on-scroll">
+                <div class="projects">
+                    <div class="Title">
+                        Team Link
+                    </div>
+                    <div class="Demo">
+                        <a class="demoBtn" href="https://elastic-ramanujan-8a1ac4.netlify.app/">Demo</a> &nbsp;
+                        <a class="demoBtn" href="https://github.com/efeliz1/efeliz.github.io">Code</a>
+                    </div>
+                    <div class="Description">
+                        A landing page which has a responsive design for every device and
+                        functionality that provides contact and detail information about the school.
+                    </div>
+                    <div class="tool desktop" id="html-css">HTML
+                        <div>CSS</div>
+                    </div>
+                    <div class="tool mobile">HTML, CSS</div>
+                </div>
+            </section>
+            <section id="contact" class="contact-section">
+                <div class="contact-section-header">
+                    <h3>Get in Touch..</h3>
+                </div>
+                <div class="contact-link">
+                    <a href="mailto:edwinjfeliz@icloud.com" class="btn-contact-details">
+                        <i class="fas fa-envelope-square"></i>
+                        Send an Email
+                    </a>
+                    <a href="tel:978-227-8634" class="btn-contact-details">
+                        <i class="fas fa-phone-square-alt"></i>
+                        Call Me
+                    </a>
+                    <a href="https://twitter.com/efeliz809" class="btn-contact-details">
+                        <i class="fab fa-twitter-square"></i>
+                        Twitter
+                    </a>
+                    <a href="https://github.com/efeliz1" class="btn-contact-details">
+                        <i class="fab fa-github-square"></i>
+                        GitHub
+                    </a>
+                </div>
+            </section>
         </section>
         <!-- contact  area -->
         <div class="sectionContact">
         </div>
     </div>
     <footer class="footer">
-        
         <a href="#" title="To Top">
-
             <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
         </a>
-
         <p><i class="far fa-copyright"></i>&nbsp;Made with &#128153; Edwin Feliz</p>
     </footer>
     <!--JavaScript -->
     <script src="./js/animation.js" defer></script>
     <script src="./js/icon.js" defer></script>
+    <script src="./js/information.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>
