@@ -34,6 +34,33 @@ html {
 }
 
 /*Responsive Rules*/
+@media only screen and (max-width: 1024px) {
+    .introduction{
+        grid-template-columns: none;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .introduction{
+        grid-template-columns: none;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            width: 100%;
+    }
+    section{;
+        grid-template-columns: none !important;
+    }
+    #sectionTitle{
+        text-align: justify !important;
+    }
+    section#contact{
+        width: 60% !important;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     .introduction {
@@ -371,161 +398,3 @@ footer p {
 }
 
 
-
-/*mobile display*/
-/*@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {*/
-/*    #page {
-        animation: fadein 1s;
-    }
-
-    .introduction {
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .introContact {
-        justify-self: start;
-        padding-right: 5px;
-        padding-left: 5px;
-        transition: all ease 0.8s;
-        text-decoration: none;
-        box-shadow: inset 0 4px 0 0 #dec79b;
-        cursor: pointer;
-    }
-
-    .introContact:active {
-        box-shadow: inset 0 100px 0 0 #dec79b;
-    }
-
-
-    .sections {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-
-    section {
-        color: #fff0ec;
-        display: grid;
-        grid-row-gap: 50px;
-        padding: 120px 10px;
-    }
-
-    .about {
-        display: flex;
-        flex-direction: column;
-        padding: 215px 5px;
-        opacity: 0;
-        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
-            opacity 0.3s 0.25s ease-out;
-        will-change: transform, opacity;
-    }
-
-    .about.is-visible {
-        opacity: 1;
-        transform: rotateZ(-2deg);
-    }
-
-    .projects {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-row-gap: 20px;
-        grid-template-areas:
-            "title title title demo"
-            "description description description description"
-            "description description description description"
-            "tool tool tool tool ";
-        padding: 10px;
-    }
-
-    .projectSection {
-        display: flex;
-        padding: 0;
-        opacity: 0;
-        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
-            opacity 0.3s 0.25s ease-out;
-        will-change: transform, opacity;
-        flex-direction: column;
-    }
-
-    .projectSection.is-visible {
-        opacity: 1;
-        transform: rotateZ(-2deg);
-    }*/
-/*}*/
-
-/*tablet*/
-/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-
-    /* start of medium tablet styles */
-/*#page {
-        animation: fadein 1s;
-    }
-
-    .introduction {
-        display: grid;
-        grid-template-columns: auto;
-        justify-content: center;
-        gap: 40px;
-        padding: 20px 20px;
-    }
-
-    .sections {
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
-    }
-
-    section {
-        color: #fff0ec;
-        display: grid;
-        grid-template-columns: 200px 3fr;
-        grid-gap: 90px;
-    }
-
-    .about {
-        display: flex;
-        opacity: 0;
-        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
-            opacity 0.3s 0.25s ease-out;
-        will-change: transform, opacity;
-        flex-direction: column;
-        padding: 100px 20px;
-    }
-
-    .about.is-visible {
-        opacity: 1;
-        transform: rotateZ(-2deg);
-    }
-
-    .projects {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto auto auto;
-        grid-row-gap: 20px;
-        grid-template-areas:
-            "title title title demo"
-            "description description description description"
-            "description description description description"
-            "tool tool tool tool ";
-        padding: 10px;
-    }
-
-    .projectSection {
-        display: flex;
-        padding: 50px 10px;
-        opacity: 0;
-        transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
-            opacity 0.3s 0.25s ease-out;
-        will-change: transform, opacity;
-        flex-direction: column;
-    }
-
-    .projectSection.is-visible {
-        opacity: 1;
-        transform: rotateZ(-2deg);
-    }*/
-
-/*}*/
