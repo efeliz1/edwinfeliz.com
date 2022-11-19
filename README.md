@@ -1,30 +1,8 @@
-# [shellbear.me](https://shellbear.me/)
+# [edwinfeliz.com](https://edwinfeliz.com/)
 
 Source code of my personal website & blog ✨
 
-Check the live version [here](https://shellbear.me/) ⚡️
-
-[![home](./.github/img/home.png)](https://shellbear.me/)
-[![blog](./.github/img/blog.png)](https://shellbear.me/)
-
-## ✨ Features
-
-- Responsive
-- RSS Feed
-- Blog with Notion API
-- Strongly typed
-- Fast thanks to Next.js and Vercel
-- Components made with styled-components
-- GitHub CI to build and lint project
-
-## 📦 Made with
-
-- next.js
-- typescript
-- styled-components
-- styled-system
-- react-notion-x
-- notion API
+Check the live version [here](https://edwinfeliz.com/) ⚡️
 
 ## 💻 Getting Started
 
