@@ -43,12 +43,15 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@next/eslint-plugin-next": "^13.0.5",
     "@types/javascript-time-ago": "^2.0.3",
     "@types/lodash": "^4.14.178",
     "@types/react": "^17.0.38",
     "@types/styled-components": "^5.1.21",
     "@types/styled-system": "^5.1.15",
     "@typescript-eslint/parser": "^5.10.1",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.31.0",
     "eslint-config-next": "^12.0.9",
     "eslint-config-prettier": "^8.3.0",

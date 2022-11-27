@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./.env
+networks:
+  default:
+    name: tunnel
+    external: true

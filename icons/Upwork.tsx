@@ -1,1 +1,0 @@
-import React, { SVGProps } from 'react';
