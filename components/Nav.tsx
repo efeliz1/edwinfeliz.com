@@ -58,7 +58,7 @@ export interface NavProps {
 const Links = (): JSX.Element => (
   <>
     <NavLink href="/">Home</NavLink>
-    <NavLink href="/about">About</NavLink>
+    <NavLink href="/aboutMef">About</NavLink>
     {/* <NavLink href="/blog">Blog</NavLink> */}
     <NavLink href="/bookmarks">Bookmarks</NavLink>
     <NavLink href="https://www.linkedin.com/in/edwin-feliz-4b799620a/">

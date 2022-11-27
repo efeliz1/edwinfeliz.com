@@ -4,7 +4,7 @@ import Grid from './Grid';
 import Link from './Link';
 import Text from './Text';
 import React from 'react';
-import { SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
+import { SiGithub, SiLinkedin, SiTwitter, SiUpwork } from 'react-icons/si';
 import { MdMail } from 'react-icons/md';
 import { Malt, Instagram } from '@icons';
 
@@ -46,7 +46,7 @@ const Footer = (): JSX.Element => {
       },
       {
         url: 'https://malt.fr/profile/antoineordonez',
-        icon: Malt,
+        icon: SiUpwork,
       },
       {
         url: 'https://www.linkedin.com/in/edwin-feliz-4b799620a/z',
