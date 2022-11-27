@@ -32,13 +32,13 @@ const Home = (): JSX.Element => (
           fontWeight="500"
           as="h2"
         >
-          Cloud Engineer
+          Engineer
         </Title>
       </Container>
       <Container maxWidth="700px" gridGap="3rem">
         <Container>
           <Text textAlign="center">
-            I&apos;m a tech enthusiast with experience in the Powershell and
+            I&apos;m a Engineer with experience in the Powershell and
             Frontend with reactjs but transitioning my work towards Cloud ☁️
             &nbsp;
             {/* <a href="https://shareview.fr">Shareview</a> and living in Bost. */}
@@ -66,7 +66,7 @@ const Home = (): JSX.Element => (
           justifyItems="stretch"
           alignItems="stretch"
         >
-          <Link href="mailto:hello@shellbear.me">
+          <Link href="mailto:hello@edwinfeliz.com">
             <Button width="100%">
               <motion.span
                 initial={{ display: 'inline-block' }}
